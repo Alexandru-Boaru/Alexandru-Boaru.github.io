@@ -3810,6 +3810,7 @@ input, select, textarea {
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
 				transition: max-width 0.2s ease;
+				transition-delay: 1ms;
 				max-width: 0;
 			}
 

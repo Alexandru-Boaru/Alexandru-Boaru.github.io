@@ -20,7 +20,11 @@ function loadPage()
         
         //console.log(data[Number(a[0])-1].title);
         //console.log(pageTitle.innerHTML);
-
+        if(Number(a[0]) < 1 || a[0] > 6)
+        {
+            window.location = path.split("/")[0] + "index.html";
+            return;
+        }
         pageTitle.innerHTML = data[Number(a[0])-1].title;
         pageDate.innerHTML = data[Number(a[0])-1].date;
         pageDescription.innerHTML = data[Number(a[0])-1].description.replace(/(?:\r\n|\r|\n)/g, '');
