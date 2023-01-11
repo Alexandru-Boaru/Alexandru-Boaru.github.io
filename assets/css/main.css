@@ -3381,6 +3381,25 @@ input, select, textarea {
 		-webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
 		mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
 	}
+	.image2
+	{
+		width: 100%;
+		height: auto;
+	}
+	@media screen and (max-width: 736px) {
+		.mask2 {
+			-webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
+			mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
+			width: 30vh;
+			height: 30vh;
+		}
+
+		.image2 {
+			width: 30vh;
+			height: 30vh;
+		}
+	}
+
 /* Header */
 
 	#header {
