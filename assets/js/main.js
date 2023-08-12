@@ -189,6 +189,13 @@
 
 })(jQuery);
 
+function UrlExists(url) {
+	var http = new XMLHttpRequest();
+	http.open('HEAD', url, false);
+	http.send();
+	return http.status!=404;
+  }
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -212,8 +219,54 @@ img.onclick = function(element){
 function displayModal(element)
 {
   modal.style.display = "block";
+  console.log(element.src);
   modalImg.src = element.src;
   captionText.innerHTML = element.alt;
+}
+
+
+
+function displayNext(direction)
+{
+	if(modal.style.display != "none")
+	{
+		console.log("Test");
+		console.log(globalSubImages);
+		var bigTokens = modalImg.src.split("_")
+		console.log(bigTokens);
+		var smallTokens = bigTokens[1].split(".");
+		console.log(smallTokens);
+		console.log(Number(smallTokens[0]));
+		if(direction == "left" && Number(smallTokens[0]) > 1)
+		{
+			smallTokens[0] = String(Number(smallTokens[0])-1);
+			console.log(smallTokens);
+			var newSrc = "";
+			newSrc = newSrc.concat(bigTokens[0], "_", smallTokens[0], ".", smallTokens[1]);
+			console.log(newSrc);
+			modalImg.src = newSrc;
+			captionText.innerHTML = smallTokens[0]-1;
+		}
+		else if(direction == "right" && Number(smallTokens[0] < globalSubImages.length)){
+			smallTokens[0] = String(Number(smallTokens[0])+1);
+			console.log(smallTokens);
+			var newSrc = "";
+			newSrc = newSrc.concat(bigTokens[0], "_", smallTokens[0], ".", smallTokens[1]);
+			console.log(newSrc);
+			modalImg.src = newSrc;
+			captionText.innerHTML = smallTokens[0]-1;
+		}
+	}
+}
+
+function displayLeft()
+{
+	displayNext("left");
+}
+
+function displayRight()
+{
+	displayNext("right");
 }
 
 // Get the <span> element that closes the modal
@@ -237,5 +290,9 @@ function closeModal(e)
 {
 	if(e.keyCode == 27 && modal)
 		modal.style.display = "none";
+	if(e.keyCode == 37 && modal)
+		displayLeft();
+	if(e.keyCode == 39 && modal)
+		displayRight();
 }
 

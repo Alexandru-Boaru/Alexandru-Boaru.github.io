@@ -4059,6 +4059,42 @@ input, select, textarea {
 	text-decoration: none;
 	cursor: pointer;
   }
+
+    /* The Left Button */
+  .leftarrow {
+	position: absolute;
+	top: 400px;
+	left: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+  }
+  
+  .leftarrow:hover,
+  .leftarrow:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+/* The Right Button */
+  .rightarrow {
+	position: absolute;
+	top: 400px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+  }
+  
+  .rightarrow:hover,
+  .rightarrow:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+  }
   
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){

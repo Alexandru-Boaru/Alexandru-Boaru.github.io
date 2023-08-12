@@ -1,6 +1,7 @@
 
 window.addEventListener("load", loadPage)
 //document.addEventListener("click", loadPage)
+let globalSubImages = [];
 function loadPage()
 {
     var queryString = location.search.substring(1);
@@ -37,6 +38,8 @@ function loadPage()
         
         pageImage.src = data[Number(a[0])-1].titleImage;
         pageSubimages.innerHTML = "";
+
+        globalSubImages = data[Number(a[0])-1].subImages;
 
         for(let i = 0; i < data[Number(a[0])-1].subImages.length; i++)
         {
