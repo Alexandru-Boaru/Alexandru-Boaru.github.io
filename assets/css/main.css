@@ -3416,12 +3416,12 @@ input, select, textarea {
 		.mask2 {
 			-webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
 			mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
-			width: 30%;
-			height: 30%;
+			width: 10%;
+			height: 10%;
 		}
 
 		.image2 {
-			width: 100%;
+			width: inherit;
 			height: auto;
 		}
 	}
