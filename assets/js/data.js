@@ -69,6 +69,7 @@ data = [
         ],
         title: "Snowfall",
         date: "2020",
+        video: "https://youtu.be/ld5iO0CHRFo",
         link : "https://ender-portal.itch.io/snowfall",
         description: 
         `
@@ -99,6 +100,7 @@ data = [
         ],
         title: "Debris Epoch",
         date: "2021",
+        video: "https://youtu.be/GY0oKMW2Ruc",
         link : "https://ender-portal.itch.io/debris-epoch",
         description: 
         `
@@ -139,6 +141,7 @@ data = [
         ],
         title: "ROBO-MAZE",
         date: "2022",
+        video: "https://youtu.be/K05-2-caOcw",
         link : "https://ender-portal.itch.io/robo-maze",
         description: 
         `
@@ -191,4 +194,85 @@ data = [
         `
         
     },
+
+    {
+        titleImage: "images/shroomcrawlerscaledbanner.png",
+        subImages : [
+            "images/shroomcrawler/shroom1.png",
+            "images/shroomcrawler/shroom2.png",
+            "images/shroomcrawler/shroom3.png",
+            "images/shroomcrawler/shroom4.png",
+            "images/shroomcrawler/shroom5.png",
+        ],
+        title: "Shroom?Crawler!",
+        date: "2023",
+        link : "https://ender-portal.itch.io/shroomcrawler",
+        description: 
+        `
+        Shroom?Crawler! is project created by a two member team over the course of two weeks and submitted to the <a href="https://itch.io/jam/metroidvania-month-19">Metroidvania Month Game Jam (19th edition)</a>
+        This project is 2D metroidvania game in which the player takes control of a fungal critter and explores a variety of underground systems: a subway, a sewer, a maintenance tunnel and a cave. The goals of the game are to evolve the fungal critter to gain new abilities and to overcome the challenges presented by the underground systems. The game features three main unlockable abilities:
+        <ul>
+        <li>Spike: can be used to destroy certain blocks to unlock new paths</li>
+        <li>Dash: can be used to get to unreachable platforms and to sprint pass dangerous traps</li>
+        <li>Wall Climb: can be used to get over high walls and to explore risky passages</li>
+        </ul>
+        
+        My tasks included: 
+        <ul>
+        <li>Creating the movement controller and exploration abilities (like dashing and climbing walls) for the player character</li>
+        <li>Designing the world, platforms challenges and puzzles</li>
+        <li>Creating a persistence system for mechanisms and player status</li>
+        </ul>
+        `
+        
+    },
+    {
+        titleImage: "images/projectsynergyvrbanner.png",
+        subImages : [
+            "images/projectsynergyvr/synergy1.png",
+            "images/projectsynergyvr/synergy2.png",
+            "images/projectsynergyvr/synergy3.png",
+            "images/projectsynergyvr/synergy4.png",
+            "images/projectsynergyvr/synergy5.png",
+        ],
+        title: "Project Synergy VR",
+        date: "2023",
+        video : "https://youtu.be/OlJYLoIo1K4",
+        link: "https://drive.google.com/drive/folders/1ZfFB0ninlCfKxOECm4_J2eG5uhq0t94u?usp=drive_link",
+        description: 
+        `
+        One of the first courses from the Master's program introduced me to VR (virtual reality). While experimenting with this technology, I discovered how foreign the controls it felt, especially playing games. This gave me the idea to create a VR game with a hybrid control, which combines the classic video control scheme of video games with the motion tracking capabilities of virtual reality devices.
+        <br><br>
+
+        Thus, for my Master's Project I made a VR Metroidvania game that features this type of hybrid control scheme. Metroidvania is a genre of games in which the users discover, over time, skills and functionalities that facilitate the way they can explore and interact with the virtual world. It is also a type of game that has been getting more popular in recent years and that I personally enjoy.
+        <br><br>
+
+        On the one hand, the player can use the controllers to manipulate a character's actions, viewed from a third-person perspective, navigate a semi-open world full of obstacles, and fight various enemies to complete their mission.
+        <br><br>
+        
+        On the other hand, the user can use the same controllers interact, in an immersive manner, with various elements and structures within the scenes in order to activate mechanisms and solve puzzles to allow the protagonist to advance.
+        <br><br>
+        
+        This was probably my most ambitious project yet, considering the fact that I had to research new technologies, implement all the gameplay systems, test and balance different parameters and create assets in order to give shape to the game.
+        <br><br>
+        
+        Some of the core challenges of this project were:
+        <ul>
+        <li>Researching and implementing the control scheme and VR interaction system</li>
+        <li>Creating a customizable character movement controller with tailor-made physics like gravity swapping, swimming and sinking</li>
+        <li>Implementing various skills that enable the player character to explore, fight and avoid obstacles</li>
+        <li>Implementing skills that are manipulated by the motion tracking system and that are vital to completing the game. Such skills include breaking, cutting and picking up objects</li>
+        <li>Creating triggers, mechanisms (ropes, breakable walls, lasers that can be reflected etc.) and puzzles which can be solved using the skills that are controlled by the motion tracking scheme</li>
+        <li>Designing and implementing various enemeies and a challenging final boss type character</li>
+        <li>Decorating the world with visual assets, like terrain, skybox, water and buildings</li>
+        <li>Setting up models, animations, materials and visual effects for the characters</li>
+        <li>Testing, fixing, polishing and finishing a playable demo on time</li>
+        </ul>
+        <br><br>
+        <b>NOTE</b>: The project is not yet available in any official VR online store. An .apk app file is available in the project link below. The game be loaded into a Oculus Quest 2 device using Sidequest or adb (Android Debug Bridge)
+
+        `
+        
+    },
+
 ]
