@@ -219,7 +219,6 @@ img.onclick = function(element){
 function displayModal(element)
 {
   modal.style.display = "block";
-  console.log(element.src);
   modalImg.src = element.src;
   captionText.innerHTML = element.alt;
 }
@@ -230,29 +229,21 @@ function displayNext(direction)
 {
 	if(modal.style.display != "none")
 	{
-		console.log("Test");
-		console.log(globalSubImages);
+
 		var bigTokens = modalImg.src.split("_")
-		console.log(bigTokens);
 		var smallTokens = bigTokens[1].split(".");
-		console.log(smallTokens);
-		console.log(Number(smallTokens[0]));
 		if(direction == "left" && Number(smallTokens[0]) > 1)
 		{
 			smallTokens[0] = String(Number(smallTokens[0])-1);
-			console.log(smallTokens);
 			var newSrc = "";
 			newSrc = newSrc.concat(bigTokens[0], "_", smallTokens[0], ".", smallTokens[1]);
-			console.log(newSrc);
 			modalImg.src = newSrc;
 			captionText.innerHTML = smallTokens[0]-1;
 		}
 		else if(direction == "right" && Number(smallTokens[0] < globalSubImages.length)){
 			smallTokens[0] = String(Number(smallTokens[0])+1);
-			console.log(smallTokens);
 			var newSrc = "";
 			newSrc = newSrc.concat(bigTokens[0], "_", smallTokens[0], ".", smallTokens[1]);
-			console.log(newSrc);
 			modalImg.src = newSrc;
 			captionText.innerHTML = smallTokens[0]-1;
 		}
@@ -268,6 +259,56 @@ function displayRight()
 {
 	displayNext("right");
 }
+
+//Function for swiping modal on phone
+
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;                                                        
+var yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                         
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+                                                                         
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                         
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* right swipe */ 
+			displayLeft();
+        } else {
+            /* left swipe */
+			displayRight();
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* down swipe */ 
+        } else { 
+            /* up swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -295,4 +336,23 @@ function closeModal(e)
 	if(e.keyCode == 39 && modal)
 		displayRight();
 }
-
+window.addEventListener('load', reorderProjects());
+function reorderProjects()
+{
+	projectRoot = document.getElementById("two");
+	var projects = Array.from(projectRoot.children);
+	var headerParagraph = projects[0];
+	projects = projects.filter((p)=> p.nodeName == "SECTION");
+	var orderType = "invChrono";
+	switch(orderType)
+	{
+		case "invChrono":
+			for(var i = 0; i < projects.length-1; i++)
+			{
+				projectRoot.insertBefore(projects[i+1], projects[i]);
+			}
+			break;
+		default:
+			break;
+	}
+}

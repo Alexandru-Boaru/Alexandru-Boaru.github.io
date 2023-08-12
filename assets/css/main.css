@@ -3378,6 +3378,7 @@ input, select, textarea {
 		}
 	
 	.mask2 {
+		height: 50%;
 		-webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
 		mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
 	}
