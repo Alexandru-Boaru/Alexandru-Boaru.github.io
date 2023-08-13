@@ -241,7 +241,7 @@ data = [
         link: "https://drive.google.com/drive/folders/1ZfFB0ninlCfKxOECm4_J2eG5uhq0t94u?usp=drive_link",
         description: 
         `
-        One of the first courses from the Master's program introduced me to VR (virtual reality). While experimenting with this technology, I discovered how different the controls it felt, especially playing games. This gave me the idea to create a VR game with a hybrid control, which combines the classic video control scheme of video games with the motion tracking capabilities of virtual reality devices.
+        One of the first courses from the Master's program introduced me to VR (virtual reality). While experimenting with this technology, I discovered how unfamiliar the controls were, especially the VR games controls. This gave me the idea to create a VR game with a hybrid control, which combines the classic video control scheme of video games with the motion tracking capabilities of virtual reality devices.
         <br><br>
 
         Thus, for my Master's Project I made a VR Metroidvania game that features this type of hybrid control scheme. Metroidvania is a genre of games in which the users discover, over time, skills and functionalities that facilitate the way they can explore and interact with the virtual world. It is also a type of game that has been getting more popular in recent years and that I personally enjoy.
